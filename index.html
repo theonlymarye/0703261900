@@ -28,7 +28,7 @@ input, button {
   <button onclick="checkPassword()">ENTER</button>
 </div>
 <div id="content" style="display:none;">
-  <h1>WE KNOW WHAT YOU HAVE DONE...</h1>
+  <h1>WE KNOW WHAT YOU HAVE DONE. CONFESS OR FACE THE CONCEQUENCES LATER</h1>
   <div id="countdown"></div>
 </div>
 <script>
@@ -44,7 +44,7 @@ function checkPassword() {
   }
 }
 function startCountdown() {
-  var targetDate = new Date("March 7, 2026 18:00:00").getTime();
+  var targetDate = new Date("March 7, 2026 12:00:00").getTime();
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = targetDate - now;
