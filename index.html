@@ -14,7 +14,7 @@ body {
   color:rgb(25, 188, 25);
   text-align:center;
 }
-#countdown { font-size:40px; }
+#countdown { font-size:80px; }
 input, button {
   padding:10px;
   font-size:16px;
@@ -55,8 +55,7 @@ function startCountdown() {
     document.getElementById("countdown").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds + " s ";
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "DEAR JAN MIKOSKA, WE HAVE RECIEVED AN ANONYMOUS MESSAGE ABOUT YOU BREAKING THE LAW.";
-      #countdown{ font-size:80px; } 
+      document.getElementById("countdown").innerHTML = "DEAR JAN MIKOSKA, WE HAVE RECIEVED AN ANONYMOUS MESSAGE ABOUT YOU BREAKING THE LAW."; 
     }
   }, 1000);
 }
