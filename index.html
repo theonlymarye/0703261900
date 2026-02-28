@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>Tajné překvapení</title>
+<title>SMRDÍTIPRDEL</title>
 <style>
 body {
   margin:0;
@@ -15,7 +15,7 @@ body {
   font-family:muj font; src:url(files/ERODED PERSONAL USE.ttf)
   text-align:center;
 }
-#countdown { font-size:40px; }
+#countdown { font-size:400px; }
 input, button {
   padding:10px;
   font-size:16px;
@@ -25,18 +25,18 @@ input, button {
 <body>
 
 <div id="login">
-  <h2>Zadej heslo 🔐</h2>
+  <h2>PASSWORD</h2>
   <input type="password" id="password">
-  <button onclick="checkPassword()">Vstoupit</button>
+  <button onclick="checkPassword()">ENTER</button>
 </div>
 
 <div id="content" style="display:none;">
-  <h1>🎉 Už se to blíží!</h1>
+  <h1>WE KNOW WHAT YOU HAVE DONE...</h1>
   <div id="countdown"></div>
 </div>
 
 <script>
-var correctPassword = "oslava2026"; // TADY změň heslo
+var correctPassword = "NEZNAM STOP NEZNAM MIRU"; 
 
 function checkPassword() {
   var entered = document.getElementById("password").value;
@@ -45,12 +45,12 @@ function checkPassword() {
     document.getElementById("content").style.display = "block";
     startCountdown();
   } else {
-    alert("Špatné heslo 😅");
+    alert("TRY HARDER");
   }
 }
 
 function startCountdown() {
-  var targetDate = new Date("June 20, 2026 18:00:00").getTime(); // TADY změň datum
+  var targetDate = new Date("March 7, 2026 18:00:00").getTime();
 
   var x = setInterval(function() {
     var now = new Date().getTime();
@@ -66,7 +66,13 @@ function startCountdown() {
 
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "🎉 Překvapení začíná!";
+      document.getElementById("countdown").innerHTML = "DEAR JAN MIKOŠKA, 
+        WE HAVE RECIEVED AN ANONYMOUS MESSAGE ABOUT YOU BREAKING THE LAW. 
+        THE GOVERMENT HAS DECIDED YOU NEED TO BE SEVERELY PUNISHED, IN ORDER TO BEHAVE BETTER AS AN ADULT.
+        REMEMBER! BEING A CHILD IS A PRIVILEGE
+        DONT TRY TO RUN, WE WILL FIND YOU WHEREVER YOU ARE"
+          
+      PS:Violence is not the key";
     }
   }, 1000);
 }
