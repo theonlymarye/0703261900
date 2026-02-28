@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Tajné překvapení</title>
+<style>
+body {
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:black;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+#countdown { font-size:40px; }
+input, button {
+  padding:10px;
+  font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<div id="login">
+  <h2>Zadej heslo 🔐</h2>
+  <input type="password" id="password">
+  <button onclick="checkPassword()">Vstoupit</button>
+</div>
+
+<div id="content" style="display:none;">
+  <h1>🎉 Už se to blíží!</h1>
+  <div id="countdown"></div>
+</div>
+
+<script>
+var correctPassword = "oslava2026"; // TADY změň heslo
+
+function checkPassword() {
+  var entered = document.getElementById("password").value;
+  if (entered === correctPassword) {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    startCountdown();
+  } else {
+    alert("Špatné heslo 😅");
+  }
+}
+
+function startCountdown() {
+  var targetDate = new Date("June 20, 2026 18:00:00").getTime(); // TADY změň datum
+
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = targetDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      days + " dní " + hours + " h " + minutes + " m " + seconds + " s ";
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "🎉 Překvapení začíná!";
+    }
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
