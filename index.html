@@ -23,7 +23,7 @@ input, button {
 </head>
 <body>
 <div id="login">
-  <h2>3_PASSWORD</h2>
+  <h2>4_PASSWORD</h2>
   <input type="password" id="password">
   <button onclick="checkPassword()">ENTER</button>
 </div>
@@ -53,12 +53,11 @@ function startCountdown() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     document.getElementById("countdown").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds + " ! ";
-    if (distance < 0) {
-      clearInterval(x);
-     <a href="https://youtu.be/oJxSNkw3nsM?is=q_dc0J1LmEi6jhTO" target="_blank">
-OPEN VIDEO
-</a>
-    }
+   if (distance < 0) {
+  clearInterval(x);
+  document.getElementById("countdown").innerHTML =
+  '<a href="https://youtu.be/oJxSNkw3nsM?is=q_dc0J1LmEi6jhTO" target="_blank">OPEN VIDEO</a>';
+}
   }, 1000);
 }
 </script>
