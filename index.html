@@ -23,7 +23,7 @@ input, button {
 </head>
 <body>
 <div id="login">
-  <h2>5_PASSWORD</h2>
+  <h2>PASSWORD</h2>
   <input type="password" id="password">
   <button onclick="checkPassword()">ENTER</button>
 </div>
@@ -32,7 +32,7 @@ input, button {
   <div id="countdown"></div>
 </div>
 <script>
-var correctPassword = "0";
+var correctPassword = "09042022";
 function checkPassword() {
   var entered = document.getElementById("password").value;
   if (entered == correctPassword) {
@@ -56,7 +56,7 @@ function startCountdown() {
    if (distance < 0) {
   clearInterval(x);
   document.getElementById("countdown").innerHTML =
-  '<a href="https://youtu.be/oJxSNkw3nsM?is=q_dc0J1LmEi6jhTO&fs=1" target="_blank">OPEN VIDEO</a>';
+  '<a href="https://youtu.be/oJxSNkw3nsM?is=q_dc0J1LmEi6jhTO&fs=1" target="_blank">I WANT TO KNOW MORE ...</a>';
 }
   }, 1000);
 }
