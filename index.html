@@ -44,7 +44,7 @@ function checkPassword() {
   }
 }
 function startCountdown() {
-  var targetDate = new Date("March 7, 2026 12:00:00").getTime();
+  var targetDate = new Date("March 7, 2026 09:45:00").getTime();
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = targetDate - now;
@@ -55,7 +55,7 @@ function startCountdown() {
     document.getElementById("countdown").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds + " ! ";
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "DEAR JAN MIKOSKA, WE HAVE RECIEVED AN ANONYMOUS MESSAGE ABOUT YOU BREAKING THE LAW."; 
+      document.getElementById("countdown").innerHTML = "https://youtu.be/oJxSNkw3nsM?is=q_dc0J1LmEi6jhTO"; 
     }
   }, 1000);
 }
